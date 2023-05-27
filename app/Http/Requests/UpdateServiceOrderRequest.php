@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateServiceOrderRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class UpdateServiceOrderRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +22,27 @@ class UpdateServiceOrderRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        $method = $this->method();
+
+        if ($method == "PUT") {
+            return [
+                "vehiclePlate" => "required",
+                "entryDateTime" => "required|date",
+                "exitDateTime" => "nullable|date",
+                "priceType" => ["required", Rule::in(["u"])],
+                "price" => "decimal:2|nullable",
+                "userId" => "numeric|nullable"
+            ];
+        } else {
+            return [
+                "vehiclePlate" => "sometimes|required",
+                "entryDateTime" => "sometimes|required|date",
+                "exitDateTime" => "sometimes|nullable|date",
+                "priceType" => ["sometimes|required", Rule::in(["u"])],
+                "price" => "sometimes|decimal:2|nullable",
+                "userId" => "sometimes|numeric|nullable"
+            ];
+        }
+        
     }
 }

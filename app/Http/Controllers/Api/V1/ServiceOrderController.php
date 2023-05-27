@@ -42,7 +42,8 @@ class ServiceOrderController extends Controller
      */
     public function store(StoreServiceOrderRequest $request)
     {
-        //
+        $data = $request->validated();
+        return new ServiceOrderResource(ServiceOrder::create($data));
     }
 
     /**
@@ -66,7 +67,9 @@ class ServiceOrderController extends Controller
      */
     public function update(UpdateServiceOrderRequest $request, ServiceOrder $serviceOrder)
     {
-        //
+        $data = $request->validated();
+        $serviceOrder->update($data);
+        return new ServiceOrderResource($serviceOrder);
     }
 
     /**

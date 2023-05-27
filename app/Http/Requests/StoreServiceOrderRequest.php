@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreServiceOrderRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreServiceOrderRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,12 @@ class StoreServiceOrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "vehiclePlate" => "required",
+            "entryDateTime" => "required|date",
+            "exitDateTime" => "nullable|date",
+            "priceType" => ["required", Rule::in(["u", "a"])],
+            "price" => "decimal:2|nullable",
+            "userId" => "numeric|nullable"
         ];
     }
 }
