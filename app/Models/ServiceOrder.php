@@ -12,6 +12,7 @@ class ServiceOrder extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class)->withDefault(new User());
+        return $this->belongsTo(User::class, "userId")->withDefault(new User());
     }
+
 }

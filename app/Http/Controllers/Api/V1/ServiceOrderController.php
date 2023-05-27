@@ -2,19 +2,31 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Filters\V1\ServiceOrderFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreServiceOrderRequest;
 use App\Http\Requests\UpdateServiceOrderRequest;
+use App\Http\Resources\V1\ServiceOrderCollection;
+use App\Http\Resources\V1\ServiceOrderResource;
 use App\Models\ServiceOrder;
+use Illuminate\Http\Request;
 
 class ServiceOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filter = new ServiceOrderFilter();
+        $queryItems = $filter->transform($request); // ["column", "operator", "value"]
+
+        if (count($queryItems) > 0) {
+            return new ServiceOrderCollection(ServiceOrder::where($queryItems)
+                ->paginate(5)->appends($request->query()));
+        }
+
+        return new ServiceOrderCollection(ServiceOrder::paginate(5));
     }
 
     /**
@@ -38,7 +50,7 @@ class ServiceOrderController extends Controller
      */
     public function show(ServiceOrder $serviceOrder)
     {
-        //
+        return new ServiceOrderResource($serviceOrder);
     }
 
     /**
