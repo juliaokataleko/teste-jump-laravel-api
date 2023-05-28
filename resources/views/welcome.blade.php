@@ -93,14 +93,14 @@
         <h2>Ordem de Serviços</h2>
 
         <div class="border p-5 mb-5">
-            <h3>Listar ordens de serviços</h3>
-            <p class="getMethod">Method: GET</p>
+            <h3>Listar ordem de serviços</h3>
+            <p class="getMethod">Método: GET</p>
             <div class="link"> <span class="endPoint">Endpoint URL: </span> <a target="_blank" href="{{ route("service-orders.index") }}">{{ route("service-orders.index") }}</a></div>
         </div>
 
         <div class="border p-5 mb-5">
-            <h3>Listar ordens de serviços com filtro de placa de veiculo</h3>
-            <p class="getMethod">Method: GET</p>
+            <h3>Listar ordem de serviços com filtro de placa de veiculo</h3>
+            <p class="getMethod">Método: GET</p>
             <div class="link"> 
                 <span class="endPoint">Endpoint URL: </span> 
                 <a target="_blank" href="{{ route("service-orders.index") }}">
@@ -112,7 +112,7 @@
 
         <div class="border p-5 mb-5">
             <h3>Adicionar ordem de serviço</h3>
-            <p class="postMethod">Method: POST</p>
+            <p class="postMethod">Método: POST</p>
             <div class="link mb-5"> <span class="endPoint">Endpoint URL: </span> <a target="_blank" href="{{ route("service-orders.store") }}">{{ route("service-orders.store") }}</a></div>
             <div class="" style="display: flex; flex-direction:column; justify-content: space-around; align-items:flex-start">
                 <div class="params" style="margin-top: 1.5em">Parâmetros</div>
@@ -131,7 +131,7 @@
 
         <div class="border p-5 mb-5">
             <h3>Atualizar ordem de serviço</h3>
-            <p class="putMethod">Method: PUT</p>
+            <p class="putMethod">Método: PUT</p>
             <div class="link mb-5">
                 <span class="endPoint">Endpoint URL: </span> 
                 <a target="_blank" href="{{ route("service-orders.update", 1) }}">
