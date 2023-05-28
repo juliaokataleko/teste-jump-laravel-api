@@ -14,10 +14,14 @@
             color: #333
         }
 
+        a {
+            color: #1d13df;
+        }
+
         .header {
-            background: #444;
+            background: #222222;
             color: #fff;
-            padding: 90px 50px;
+            padding: 70px 50px;
             text-align: center;
             font-size: 40px;
         }
@@ -41,10 +45,39 @@
             margin-bottom: 25px;
         }
 
+        .endPoint {
+            background: #4f0a7c;
+            padding: 5px;
+            color: #fff;
+            margin-right: 8px;
+        }
+
         .getMethod {
             background: #0ab30a;
-            padding: 10px;
+            padding: 8px;
             color: #fff;
+            border-radius: 3px;
+        }
+
+        .postMethod {
+            background: #211c7b;
+            padding: 8px;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .putMethod {
+            background: #5c0934;
+            padding: 8px;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .params {
+            background: #095ec6;
+            color: #fff;
+            padding: 8px;
+            width: 30%;
         }
     </style>
 </head>
@@ -57,20 +90,56 @@
     <div class="content">
         <h1>Endpoints</h1>
 
-        <h2>Ordens de Serviços</h2>
+        <h2>Ordem de Serviços</h2>
 
         <div class="border p-5 mb-5">
             <h3>Listar ordens de serviços</h3>
             <p class="getMethod">Method: GET</p>
-            <div class="link"><a target="_blank" href="{{ route("service-orders.index") }}">{{ route("service-orders.index") }}</a></div>
+            <div class="link"> <span class="endPoint">Endpoint URL: </span> <a target="_blank" href="{{ route("service-orders.index") }}">{{ route("service-orders.index") }}</a></div>
         </div>
 
         <div class="border p-5 mb-5">
             <h3>Adicionar ordem de serviço</h3>
+            <p class="postMethod">Method: POST</p>
+            <div class="link mb-5"> <span class="endPoint">Endpoint URL: </span> <a target="_blank" href="{{ route("service-orders.store") }}">{{ route("service-orders.store") }}</a></div>
+            <div class="mb-5" style="display: flex; justify-content: space-around; align-items:flex-start">
+                <div class="params" style="margin-top: 1.5em">Parâmetros</div>
+                <div id="params">
+                    <ul>
+                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro, obrigatório</li>
+                        <li><b>vehiclePlate</b>: # número da matrícula, obrigatório</li>
+                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
+                        <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
+                        <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
+                        <li> <b>price</b>: # preço, valor decimal </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="border p-5 mb-5">
             <h3>Atualizar ordem de serviço</h3>
+            <p class="putMethod">Method: PUT</p>
+            <div class="link mb-5">
+                <span class="endPoint">Endpoint URL: </span> 
+                <a target="_blank" href="{{ route("service-orders.update", 1) }}">
+                    {{-- {{ route("service-orders.update", "6") }} --}}
+                    http://localhost/api/v1/service-orders/{id}
+                </a>
+            </div>
+            <div class="mb-5" style="display: flex; justify-content: space-around; align-items:flex-start">
+                <div class="params" style="margin-top: 1.5em">Parâmetros</div>
+                <div id="params">
+                    <ul>
+                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro, obrigatório</li>
+                        <li><b>vehiclePlate</b>: # número da matrícula, obrigatório</li>
+                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
+                        <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
+                        <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
+                        <li> <b>price</b>: # preço, valor decimal </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </div>
