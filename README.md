@@ -1,6 +1,6 @@
 # Service Orders API
 
-![alt text](https://github.com/juliaokataleko/teste-jump-laravel-api/blob/[master]/public/home.png?raw=true)
+![alt text](https://github.com/juliaokataleko/teste-jump-laravel-api/blob/master/public/home.png?raw=true)
 
 ### Requirements
 OS: Mac Os, Linux or Windows with (wsl) <br/>
