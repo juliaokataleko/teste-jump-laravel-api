@@ -67,7 +67,7 @@
         }
 
         .putMethod {
-            background: #5c0934;
+            background: #129b9b;
             padding: 8px;
             color: #fff;
             border-radius: 3px;
@@ -77,7 +77,7 @@
             background: #095ec6;
             color: #fff;
             padding: 8px;
-            width: 30%;
+            width: 50%;
         }
     </style>
 </head>
@@ -99,10 +99,22 @@
         </div>
 
         <div class="border p-5 mb-5">
+            <h3>Listar ordens de serviços com filtro de placa de veiculo</h3>
+            <p class="getMethod">Method: GET</p>
+            <div class="link"> 
+                <span class="endPoint">Endpoint URL: </span> 
+                <a target="_blank" href="{{ route("service-orders.index") }}">
+                    {{ route("service-orders.index") }}?vehiclePlate[eq]={vehiclePlate}
+                </a>
+            </div>
+        </div>
+
+
+        <div class="border p-5 mb-5">
             <h3>Adicionar ordem de serviço</h3>
             <p class="postMethod">Method: POST</p>
             <div class="link mb-5"> <span class="endPoint">Endpoint URL: </span> <a target="_blank" href="{{ route("service-orders.store") }}">{{ route("service-orders.store") }}</a></div>
-            <div class="mb-5" style="display: flex; justify-content: space-around; align-items:flex-start">
+            <div class="" style="display: flex; flex-direction:column; justify-content: space-around; align-items:flex-start">
                 <div class="params" style="margin-top: 1.5em">Parâmetros</div>
                 <div id="params">
                     <ul>
@@ -111,7 +123,7 @@
                         <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
                         <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
                         <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
-                        <li> <b>price</b>: # preço, valor decimal </li>
+                        <li> <b>price</b>: # preço, valor decimal, obrigatório, Ex: 100.99 </li>
                     </ul>
                 </div>
             </div>
@@ -127,7 +139,7 @@
                     http://localhost/api/v1/service-orders/{id}
                 </a>
             </div>
-            <div class="mb-5" style="display: flex; justify-content: space-around; align-items:flex-start">
+            <div class="" style="display: flex; flex-direction:column;  justify-content: space-around; align-items:flex-start">
                 <div class="params" style="margin-top: 1.5em">Parâmetros</div>
                 <div id="params">
                     <ul>
@@ -136,7 +148,7 @@
                         <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
                         <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
                         <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
-                        <li> <b>price</b>: # preço, valor decimal </li>
+                        <li> <b>price</b>: # preço, valor decimal, obrigatório, Ex: 100.99 </li>
                     </ul>
                 </div>
             </div>
