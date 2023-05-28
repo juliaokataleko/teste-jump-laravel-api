@@ -9,6 +9,9 @@ Docker installed in your machine
  - Go into cloned folder: cd /folder-name
 
  - Open the terminal and run the following command to install dependencies:
+
+ ** with docker running **
+
  ```bash
   docker run --rm \
     -u "$(id -u):$(id -g)" \
@@ -17,8 +20,6 @@ Docker installed in your machine
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
 ```
-
-with docker running
 
 Run the command:
 ```bash
