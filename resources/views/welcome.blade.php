@@ -118,11 +118,11 @@
                 <div class="params" style="margin-top: 1.5em">Parâmetros</div>
                 <div id="params">
                     <ul>
-                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro, obrigatório</li>
+                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro</li>
                         <li><b>vehiclePlate</b>: # número da matrícula, obrigatório</li>
-                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
+                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01 </li>
                         <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
-                        <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
+                        <li> <b>priceType</b>: # tipo de preço, string </li>
                         <li> <b>price</b>: # preço, valor decimal, obrigatório, Ex: 100.99 </li>
                     </ul>
                 </div>
@@ -143,11 +143,11 @@
                 <div class="params" style="margin-top: 1.5em">Parâmetros</div>
                 <div id="params">
                     <ul>
-                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro, obrigatório</li>
+                        <li><b>userId</b>: # usuário responsável pelo serviço, número inteiro</li>
                         <li><b>vehiclePlate</b>: # número da matrícula, obrigatório</li>
-                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01, obrigatório </li>
+                        <li> <b>entryDateTime</b>: # data de entrada. formato: 2000-01-01 </li>
                         <li> <b>exitDateTime</b>: # data de término: formato: 2000-0-01 </li>
-                        <li> <b>priceType</b>: # tipo de preço, obrigatório </li>
+                        <li> <b>priceType</b>: # tipo de preço, string </li>
                         <li> <b>price</b>: # preço, valor decimal, obrigatório, Ex: 100.99 </li>
                     </ul>
                 </div>
