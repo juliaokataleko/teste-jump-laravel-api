@@ -22,18 +22,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         User::factory()
-            ->count(25)
-            ->hasServiceOrders(20)
-            ->create();
-
-        User::factory()
-            ->count(20)
+            ->count(5)
             ->hasServiceOrders(10)
             ->create();
 
-        User::factory()
-            ->count(10)
-            ->hasServiceOrders(5)
-            ->create();
     }
 }

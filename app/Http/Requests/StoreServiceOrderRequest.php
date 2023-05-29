@@ -23,10 +23,10 @@ class StoreServiceOrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "vehiclePlate" => "required",
-            "entryDateTime" => "required|date",
+            "vehiclePlate" => "nullable|string",
+            "entryDateTime" => "nullable|date",
             "exitDateTime" => "nullable|date",
-            "priceType" => ["required", Rule::in(["u", "a"])],
+            "priceType" => "nullable|string",
             "price" => "decimal:2|nullable",
             "userId" => "numeric|nullable"
         ];

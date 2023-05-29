@@ -24,25 +24,14 @@ class UpdateServiceOrderRequest extends FormRequest
     {
         $method = $this->method();
 
-        if ($method == "PUT") {
-            return [
-                "vehiclePlate" => "required",
-                "entryDateTime" => "required|date",
-                "exitDateTime" => "nullable|date",
-                "priceType" => ["required", Rule::in(["u"])],
-                "price" => "decimal:2|nullable",
-                "userId" => "numeric|nullable"
-            ];
-        } else {
-            return [
-                "vehiclePlate" => "sometimes|required",
-                "entryDateTime" => "sometimes|required|date",
-                "exitDateTime" => "sometimes|nullable|date",
-                "priceType" => ["sometimes|required", Rule::in(["u"])],
-                "price" => "sometimes|decimal:2|nullable",
-                "userId" => "sometimes|numeric|nullable"
-            ];
-        }
+        return [
+            "vehiclePlate" => "nullable|string",
+            "entryDateTime" => "nullable|date",
+            "exitDateTime" => "nullable|date",
+            "priceType" => "nullable|string",
+            "price" => "decimal:2|nullable",
+            "userId" => "numeric|nullable"
+        ];
         
     }
 }
