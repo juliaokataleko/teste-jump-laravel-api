@@ -103,7 +103,7 @@
             <p class="getMethod">Método: GET</p>
             <div class="link"> 
                 <span class="endPoint">Endpoint URL: </span> 
-                <a target="_blank" href="{{ route("service-orders.index") }}">
+                <a target="_blank" href="{{ route("service-orders.index") }}?vehiclePlate[eq]={vehiclePlate}">
                     {{ route("service-orders.index") }}?vehiclePlate[eq]={vehiclePlate}
                 </a>
             </div>
@@ -136,7 +136,7 @@
                 <span class="endPoint">Endpoint URL: </span> 
                 <a target="_blank" href="{{ route("service-orders.update", 1) }}">
                     {{-- {{ route("service-orders.update", "6") }} --}}
-                    http://localhost/api/v1/service-orders/{id}
+                    {{ route("service-orders.index") }}/{id}
                 </a>
             </div>
             <div class="" style="display: flex; flex-direction:column;  justify-content: space-around; align-items:flex-start">
