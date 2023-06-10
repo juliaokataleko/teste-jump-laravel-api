@@ -7,13 +7,13 @@ OS: Mac Os, Linux or Windows with (wsl) <br/>
 Docker installed in your machine
 
 ### Installation
- - Clone the repository: 
+ - Open the terminal and clone the repository: 
  ```bash
  git clone https://github.com/juliaokataleko/teste-jump-laravel-api
  ```
  - Go into cloned folder: cd /folder-name
 
- - Open the terminal and run the following command to install dependencies:
+ - run the following command to install dependencies:
 
  ** with docker running **
 
