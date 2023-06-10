@@ -13,7 +13,7 @@ Docker installed in your machine
  - If you are in linux (Ubuntu) and you did not add current user to the docker group, please run
 
  ```bash
-  sudo usermod -aG docker <username>
+  sudo usermod -aG docker $USER
  ```
 
  - clone the repository: 
