@@ -10,12 +10,12 @@ Docker installed in your machine
 
  - Open the terminal
 
- - If you are in linux (Ubuntu) and did not add current user to the docker group, please run
+ - If you are in linux (Ubuntu) and you did not add current user to the docker group, please run
 
  ```bash
   sudo usermod -aG docker <username>
  ```
- 
+
  - clone the repository: 
  ```bash
  git clone https://github.com/juliaokataleko/teste-jump-laravel-api
