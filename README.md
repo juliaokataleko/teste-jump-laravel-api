@@ -26,6 +26,11 @@ Docker installed in your machine
     composer install --ignore-platform-reqs
 ```
 
+Setup .env file
+ ```bash
+  cp .env.example .env
+```
+
 Run the command:
 ```bash
   vendor/bin/sail up -d
